@@ -1,13 +1,13 @@
-//who wins module testbench
-module who_winstb(
+//determining the winner module testbench
+//parameters
+parameter CYCLE = 20;
+module game_state_tb(
     winner_flag,
     loser_flag,
     gameover,
     clk,
     who
 );
-//parameters
-parameter CYCLE = 20;
 //declaration of inputs and outputs
 input gameover,who;
 output winner_flag,loser_flag,clk;
@@ -28,12 +28,12 @@ initial begin
     end
 end
 //process
-who_wins ww(
+game_state gs(
     .winner_flag(winner_flag),
     .loser_flag(loser_flag),
     .gameover(gameover),
     .clk(clk),
-    .who(who),
+    .who(who)
 );
 initial begin
     $dumpfile("who_wins_tb.vcd");
