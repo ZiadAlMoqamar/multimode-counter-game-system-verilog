@@ -1,9 +1,14 @@
 //full game testbench
-module full_gametb(
-    init,initial_val,control,clk,gameover,who
-);
 //parameters
 parameter CYCLE = 2;
+module full_gametb(
+    init,
+    initial_val,
+    control,
+    clk,
+    gameover,
+    who
+);
 //declaration of inputs and outputs
 input gameover,who;
 output init,initial_val,control,clk;

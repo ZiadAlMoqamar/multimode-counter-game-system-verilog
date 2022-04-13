@@ -1,9 +1,12 @@
-//2 bit counter testbench
-module flag_counter_tb(
-    winner,rst,clk,winner_gameover
-);
+//winner plain binary counter testbench
 //parameters
 parameter CYCLE = 20;
+module flag_counter_tb(
+    winner,
+    rst,
+    clk,
+    winner_gameover
+);
 //declaration of declaration of inputs and outputs
 input winner_gameover;
 output winner,rst,clk;
@@ -26,7 +29,7 @@ flag_counter w1(
     .trigger(winner),
     .rst(rst),
     .clk(clk),
-    .gameover(winner_gameover)
+    .flag(winner_gameover)
 );
 initial begin
     $dumpfile("flag_counter_tb.vcd");
