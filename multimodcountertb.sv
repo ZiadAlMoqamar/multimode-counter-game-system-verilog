@@ -2,7 +2,12 @@
 parameter CYCLE = 20;
 //4 bit counter testbench
 module main_counter_tb(
-init,initial_val,control,clk,winner,loser
+    init,
+    initial_val,
+    control,
+    clk,
+    winner,
+    loser
 );
     //declaration of inputs and outputs
     input  winner,loser;
