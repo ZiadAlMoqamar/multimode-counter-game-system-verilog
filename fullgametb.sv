@@ -1,6 +1,6 @@
 //full game testbench
 //parameters
-parameter CYCLE = 2;
+parameter CYCLE = 20;
 module full_gametb(
     init,
     initial_val,
@@ -42,7 +42,7 @@ module full_gametb(
     initial begin
         $dumpfile("full_game_tb.vcd");
         $dumpvars;
-    #(15*70)
+    #(15*700)
         $finish;
     end
 endmodule
