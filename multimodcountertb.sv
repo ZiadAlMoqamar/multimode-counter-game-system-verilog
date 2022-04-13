@@ -1,11 +1,9 @@
-// Code your testbench here
-// or browse Examples
+//parameters
+parameter CYCLE = 20;
 //4 bit counter testbench
 module main_counter_tb(
 init,initial_val,control,clk,winner,loser
 );
-    //parameters
-    parameter CYCLE = 20;
     //declaration of inputs and outputs
     input  winner,loser;
     output init,initial_val,control,clk;
@@ -13,12 +11,12 @@ init,initial_val,control,clk,winner,loser
     wire winner,loser;
     reg init,clk;
     reg[1:0] control;
-    reg[3:0] initial_val;
+    reg[n-1:0] initial_val;
     //initialization of internal variables
     initial begin
-        initial_val = 0;
+        initial_val = 6;
         control = 2;
-        init = 0;
+        init = 1;
         clk = 0;
         forever begin
             #(CYCLE);

@@ -37,7 +37,7 @@ module main_counter (
         loser = 0;
         winner = 0;
         //if reset is asserted, reset the counter
-        if(rst) begin
+        if(rst||winner||loser) begin
             //if init is asserted, load the initial value
             if (init == 1) begin
             count=initial_val;
